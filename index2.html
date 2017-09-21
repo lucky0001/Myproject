@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>圆角</title>
+</head>
+<style type="text/css">
+	body,#a::before{
+        margin:0;
+        padding:0;
+        background-color:black;
+        background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+    article{
+        width:90%;
+         margin: auto;
+    }
+    #a{
+        width:600px;
+        height:300px;
+        background:hsla(0,0%,100%,0.3);
+        border-radius:10px;
+        padding:20px;
+        margin:auto;
+        margin-top:10%;
+        position:relative;
+        overflow:hidden;
+    }
+	p{
+        color:white;
+        font-size:36px;
+    }
+	#a::before{
+        content:'';position:absolute;
+        top:0;right:0;
+        bottom:0;left:0;
+        z-index:-1;
+        -webkit-filter:blur(30px);
+    }
+    .top{
+        width:95%;
+        margin: auto;
+    }
+	li{
+        font-size:20px;
+        list-style:none;
+        width:100px;
+        height:60px;
+        display: inline-flex;
+        background:#9FF;
+        text-align:center;
+        line-height:60px;
+        margin:20px;
+        background:linear-gradient(-120deg,transparent 15px,#9FF 0) top right,linear-gradient(-60deg,transparent 15px,#9FF 0) bottom right;background-size:100% 50%;
+        background-repeat:no-repeat;
+    }
+    h1{
+        color:white;
+    }
+</style>
+<body>
+    <article>
+	<div class="top">
+        <h1>个人资料</h1>
+    	<ul>
+    		<li>姓名</li>
+        	<li>性别</li>
+        	<li>年龄</li>
+            <li>毕业学校</li>
+            <li>所学专业</li>
+            <li>联系电话</li>
+            <li>微信/QQ</li>
+           
+    	</ul>
+    </div>
+    <details style="color:white;">
+        <summary>行不行</summary>
+        <h4>来来来</h4>
+        <h4>试试看</h4>
+    </details>
+	<div id="a">
+    <p>试试毛玻璃效果怎样吧</p>
+    </div>
+    </article>
+</body>
+</html>
